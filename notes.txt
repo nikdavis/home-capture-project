@@ -1,7 +1,0 @@
-camera is 5MP or 2560x1920 aspect ration 4:3
-https://www.aliexpress.com/snapshot/0.html?spm=a2g0s.9042647.6.2.5d814c4d6EzRoL&orderId=88890422240145&productId=32795142508
-
-
-need to install:
-ruby-dev
-sudo apt-get install libmysql++-dev
