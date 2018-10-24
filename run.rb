@@ -5,6 +5,7 @@ require_relative './security'
 
 bucket_name = 'home_capture'
 
+puts Security.find(1)
 # get list of new files
 # query mysql, if null, start from >= 0
 # else grab last_security_id
