@@ -27,7 +27,7 @@ new_images.each_with_index do |i, image|
   s3 = Aws::S3::Resource.new(region:'us-west-2')
   obj = s3.bucket(bucket_name).object(name_wo_folder)
   obj.upload_file('../' + image.filename)
-  puts "Uploaded image #{i} of #{new_images.length}: #{image.name_wo_folder}"
+  puts "Uploaded image #{i} of #{new_images.length}: #{name_wo_folder}"
 end
 
 current_run.last_security_id = new_images.last.id
