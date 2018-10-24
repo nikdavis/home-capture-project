@@ -21,7 +21,6 @@ current_run = S3Runs.new()
 current_run.run_time = DateTime.now
 
 new_images.each_with_index do |image, i|
-  image = new_images[0]
   name_wo_folder = image.filename.split('/')[1]
 
   s3 = Aws::S3::Resource.new(region:'us-west-2')
