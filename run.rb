@@ -24,10 +24,9 @@ current_run.run_time = DateTime.now
 
 new_images.each_with_index do |image, i|
   ext = image.filename.split('.')[-1]
-  filename = image.time_stamp.strftime("#{day_format} %H%M%S%L") + '.' + ext
   day_prefix = image.time_stamp.strftime(day_format)
 
-  key = day_prefix + '/' + filename
+  key = day_prefix + '/' + image.filename.split('/')[-1]
   s3 = Aws::S3::Resource.new(region:'us-west-2')
   obj = s3.bucket(bucket_name).object(key)
   obj.upload_file(image.filename)
