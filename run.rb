@@ -17,7 +17,7 @@ new_images = Security.where('id > ?', last_security_id)
 
 exit if new_images.length == 0
 
-current_run = S3Run()
+current_run = S3Runs()
 current_run.run_time = DateTime.now
 
 new_images.each_with_index do |i, image|
