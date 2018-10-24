@@ -24,7 +24,7 @@ current_run.run_time = DateTime.now
 
 new_images.each_with_index do |image, i|
   ext = image.filename.split('.')[-1]
-  filename = image.time_stamp.strftime("#{day_format} %H%M%S") + '.' + ext
+  filename = image.time_stamp.strftime("#{day_format} %H%M%S%L") + '.' + ext
   day_prefix = image.time_stamp.strftime(day_format)
 
   key = day_prefix + '/' + filename
