@@ -14,3 +14,8 @@ sudo apt-get install libmysql++-dev
 ```
 
 You'll need to create a user, DB, and tables (see sql files) and ensure the information is in your `motion.conf` (to come soon).
+
+E.g. cron setup (run `crontab -e` as root and paste new line):
+```
+1/10 * * * * . /home/pi/home-capture-project/aws.env && ruby /home/pi/home-capture-project/run.rb >> /tmp/motion/motion.log 2>&1
+```
