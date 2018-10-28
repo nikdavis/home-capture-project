@@ -6,7 +6,7 @@ require_relative './security'
 
 bucket_name = 'home-motion-capture'
 
-day_format = '%Y-%m-%d'
+day_format = '%Y-%m-%d' # folder prefix -- zero padded
 file_format = '#{day_format} '
 
 last_security_id = 0
